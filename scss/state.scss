@@ -1,0 +1,94 @@
+@import './colors';
+
+
+/*default */
+.card-default .card_body{
+    cursor: pointer;
+    border-color: $color-default;
+}
+.card-default .card_weight{
+    background-color: $color-default;
+}
+
+.card-default .card_body:hover{
+    border-color: $color-default-hover;
+}
+.card-default .card_body:hover .card_weight{
+    background-color: $color-default-hover;
+}
+
+
+/* Selected */
+.card-selected .card_body{
+    cursor: pointer;
+    border-color: $color-selected;
+}
+
+.card-selected .card_weight{
+    background-color: $color-selected;
+}
+
+.card-selected .card_body:hover{
+    border-color: $color-selected-hover;
+}
+.card-selected .card_body:hover .card_weight{
+    background-color: $color-selected-hover;
+}
+
+.card-selected .card_undercard{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s ease-out;
+}
+.card-selected .undercard-selected{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+/* Disabled */
+.card-disabled .card_body:hover{
+    cursor: auto;
+}  
+.card-disabled .card_body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    background-color: $color-disbled;
+    opacity: 0.6;
+}
+.card-disabled .card_body{
+    border-color: $color-disbled;
+}
+
+ .card-disabled .card_body .card_weight{
+    background-color: $color-disbled;
+}
+
+.card-disabled .card_undercard{
+    visibility: hidden;
+    opacity: 0;
+}
+.card-disabled .undercard-disabled{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* undercard states */
+
+.undercard-selected{
+    visibility: hidden;
+    opacity: 0;
+}
+.undercard-disabled{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s ease-out;
+    color: $color-text-disabled;
+}

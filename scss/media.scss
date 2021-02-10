@@ -1,0 +1,35 @@
+@media (max-width: 1440px){
+    .page{
+        height: 100%;
+    }
+    .card{
+        margin: 0px 10px 20px 10px;
+    }
+    .card_text{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+@media (max-width: 1028px){
+    .page{
+        height: 100%;
+    }
+    .content_cards{
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 425px){
+    .content_cards{
+        padding: 0px 6px 0px 6px;
+    }
+    .card{
+        margin: 0px 6px 20px 6px;
+    }
+    .content_title{
+        text-align: center;
+    }
+}
